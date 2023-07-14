@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"time"
 
 	"demo.hotel/services"
 )
@@ -41,6 +42,7 @@ func (bc *BookingController) StartIO() {
 			} else {
 				fmt.Println("Please enter Insert, Leave, Book query")
 			}
+			time.Sleep(time.Second)
 		}
 		completeCh <- true
 	}()
